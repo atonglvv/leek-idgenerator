@@ -1,0 +1,13 @@
+server:
+  port: 8088
+
+leaf:
+  name: idgenerator
+  segment:
+    enable: false
+  snowflake:
+    enable: true
+    zk:
+      address: localhost
+      port: 2181
+

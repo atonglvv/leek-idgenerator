@@ -1,5 +1,7 @@
 package cn.atong.leek.idgenerator.request;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -8,6 +10,7 @@ import java.io.Serializable;
  * @author: atong
  * @create: 2021-04-13 16:08
  */
+@Data
 public class IdGeneratorRequest implements Serializable {
 
     /** 业务类型 */
