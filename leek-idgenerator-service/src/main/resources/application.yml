@@ -11,3 +11,21 @@ leaf:
       address: localhost
       port: 2181
 
+
+# dubbo 相关配置
+dubbo:
+  registry:
+    protocol: zookeeper
+    address: localhost:2181
+  protocol:
+    name: dubbo
+    port: 29881
+  scan:
+    base-packages: cn.atong.leek.idgenerator.rpc.impl
+  application:
+    name: idgenerator
+  provider:
+    version: 1.0.0
+    group: idgenerator
+
+
