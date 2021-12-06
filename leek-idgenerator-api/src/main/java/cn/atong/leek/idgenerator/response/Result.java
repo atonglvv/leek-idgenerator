@@ -36,7 +36,7 @@ public class Result<T> implements Serializable {
      * @date 2021/4/13 17:02
      * @version 1.0.0.1
      */
-    public static <T> Result<T> SUCCESS() {
+    public static <T> Result<T> success() {
         return new Result<T>(SUCCESS , "" , ResponseCode.SUCCESS , null);
     }
 
@@ -49,7 +49,7 @@ public class Result<T> implements Serializable {
      * @date 2021/4/13 17:04
      * @version 1.0.0.1
      */
-    public static <T> Result<T> SUCCESS(String msg) {
+    public static <T> Result<T> success(String msg) {
         return new Result<T>(SUCCESS , msg , ResponseCode.SUCCESS , null);
     }
 
@@ -62,7 +62,7 @@ public class Result<T> implements Serializable {
      * @date 2021/4/13 17:10
      * @version 1.0.0.1
      */
-    public static <T> Result<T> SUCCESS(String msg, T t) {
+    public static <T> Result<T> success(String msg, T t) {
         return new Result<T>(SUCCESS , msg , ResponseCode.SUCCESS , t);
     }
 
@@ -77,8 +77,12 @@ public class Result<T> implements Serializable {
      * @date 2021/4/13 17:12
      * @version 1.0.0.1
      */
-    public static <T> Result<T> ERROR(String msg , Integer code , T t) {
+    public static <T> Result<T> error(String msg , Integer code , T t) {
         return new Result<T>(ERROR , msg , code , t);
+    }
+
+    public static <T> Result<T> error(String msg , Integer code) {
+        return new Result<T>(ERROR , msg , code , null);
     }
 
 
